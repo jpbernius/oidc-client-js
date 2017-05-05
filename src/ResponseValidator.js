@@ -385,8 +385,11 @@ export default class ResponseValidator {
         }
 
         var left = hash.substr(0, hash.length / 2);
-        var left_b64u = this._joseUtil.hexToBase64Url(left);
+        var left_b64u = btoa(left);
+        left_b64u = left_b64u.substr(0, left_b64u.length-1);
         if (left_b64u !== response.profile.at_hash) {
+
+            console.log(sha, hash, left, left_b64u);
             Log.error("Failed to validate at_hash", left_b64u, response.profile.at_hash);
             return Promise.reject(new Error("Failed to validate at_hash"));
         }

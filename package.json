@@ -4,13 +4,13 @@
   "description": "OpenID Connect (OIDC) & OAuth2 client library",
   "main": "lib/oidc-client.min.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp",
     "start": "node sample/server.js",
     "test": "mocha --compilers js:babel-register test/unit/*.spec.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IdentityModel/oidc-client-js.git"
+    "url": "https://github.com/jpbernius/oidc-client-js.git"
   },
   "author": "Brock Allen & Dominick Baier",
   "contributors": [
@@ -21,6 +21,10 @@
     {
       "name": "Dominick Baier",
       "email": "dbaier@leastprivilege.com"
+    },
+    {
+      "name": "Jan Philip Bernius",
+      "email": "janphilip.bernius@doo.net"
     }
   ],
   "license": "Apache-2.0",
@@ -45,7 +49,7 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "jsrsasign": "^5.0.7"
+    "jsrsasign": "^7.0.0"
   },
   "peerDependencies": {
     "babel-polyfill": ">=6.9.1"

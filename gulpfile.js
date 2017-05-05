@@ -80,4 +80,6 @@ gulp.task('build-dist-min', function() {
 });
 
 // putting it all together
-gulp.task('build', ['build-lib-sourcemap', 'build-lib-min', 'build-dist-sourcemap', 'build-dist-min']);
+gulp.task('lib', ['build-lib-sourcemap', 'build-lib-min']);
+gulp.task('dist', ['build-dist-sourcemap', 'build-dist-min']);
+gulp.task('default', ['lib', 'dist']);

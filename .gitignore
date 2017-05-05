@@ -8,6 +8,8 @@
 .idea/
 
 # Build results
+dist/
+lib/
 
 [Dd]ebug/
 [Rr]elease/
